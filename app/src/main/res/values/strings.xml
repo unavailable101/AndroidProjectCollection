@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">AndroidProjectCollection</string>
+    
+<!--    for btn exer-->
+    <string name="close">Close</string>
+    <string name="toast">Toast</string>
+    <string name="change_bg">Change Background</string>
+    <string name="change_btn_bg">Change Button Background</string>
+    <string name="invisible">Disappear</string>
+    <string name="balik">Return</string>
+    
+<!--    for main-->
+    <string name="layout">Layout Exercise</string>
+    <string name="btn_exer">Button Exercise</string>
+    <string name="calc">Calculator</string>
+    <string name="midterm">Midterm</string>
+    <string name="konek">Connect 3</string>
+
+<!--for calc-->
+    <string name="all_clear">AC</string>
+    <string name="clear">C</string>
+    <string name="period">.</string>
+    <string name="division">/</string>
+    <string name="multiplication">x</string>
+    <string name="subtract">-</string>
+    <string name="add">+</string>
+    <string name="double_zero">00</string>
+    <string name="zero">0</string>
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="six">6</string>
+    <string name="seven">7</string>
+    <string name="eight">8</string>
+    <string name="nine">9</string>
+    <string name="backspace"> BS </string>
+    <string name="equals">=</string>
+
+<!--    for color matching (midterm)-->
+<!--    <string name="color_matching">Start Color Matching Game</string>-->
+    <string name="ret">Return</string>
+    <string name="exit">Exit</string>
+    <string name="game">Color Matching</string>
+    <string name="empty"> </string>
+
+<!--    for connect 3-->
+    <string name="konek">Connect 3</string>
+    <string name="restart">Restart</string>
+
+</resources>
