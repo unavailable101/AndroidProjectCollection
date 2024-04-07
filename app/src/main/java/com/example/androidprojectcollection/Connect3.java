@@ -113,6 +113,7 @@ public class Connect3 extends AppCompatActivity implements View.OnClickListener{
                 slots[i][j] = -1;
                 cp = 0;
                 player.setText(getString(currentPlayer[cp]));
+                foundWinner = false;
             }
         }
     }
