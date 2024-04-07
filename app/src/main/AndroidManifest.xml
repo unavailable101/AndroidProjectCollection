@@ -16,22 +16,18 @@
             android:exported="false" />
         <activity
             android:name=".LayoutExercise"
-            android:configChanges="orientation"
             android:exported="false" />
         <activity
             android:name=".ButtonExercise"
             android:exported="false" />
         <activity
             android:name=".Calculator"
-            android:configChanges="orientation"
             android:exported="false" />
         <activity
             android:name=".ColorMatching"
-            android:configChanges="orientation"
             android:exported="false" />
         <activity
             android:name=".Connect3"
-            android:configChanges="orientation"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

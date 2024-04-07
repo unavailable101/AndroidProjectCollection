@@ -44,7 +44,7 @@
 <!--    <string name="color_matching">Start Color Matching Game</string>-->
     <string name="ret">Return</string>
     <string name="exit">Exit</string>
-    <string name="game">Color Matching</string>
+    <string name="game">Color\nMatching</string>
     <string name="empty"> </string>
 
 <!--    for connect 3-->
