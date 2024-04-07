@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">AndroidProjectCollection</string>
+
+    <string name="title">Project Collection</string>
     
 <!--    for btn exer-->
     <string name="close">Close</string>
@@ -46,7 +48,8 @@
     <string name="empty"> </string>
 
 <!--    for connect 3-->
-    <string name="konek">Connect 3</string>
     <string name="restart">Restart</string>
+    <string name="black">Black</string>
+    <string name="red">Red</string>
 
 </resources>
