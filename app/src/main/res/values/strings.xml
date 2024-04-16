@@ -19,7 +19,7 @@
     <string name="konek">Connect 3</string>
 
 <!--for calc-->
-    <string name="all_clear">AC</string>
+    <string name="home">H</string>
     <string name="clear">C</string>
     <string name="period">.</string>
     <string name="division">/</string>
