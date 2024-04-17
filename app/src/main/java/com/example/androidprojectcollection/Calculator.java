@@ -7,19 +7,26 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Stack;
 
-public class Calculator extends AppCompatActivity{
+public class Calculator extends AppCompatActivity implements View.OnClickListener{
 
-    //numbers
-    Button btnOne, btnTwo, btnThree, btnFour, btnFive, btnSix, btnSeven, btnEight, btnNine, btnZero, btnZero2;
-
-    //operations
+    //TODO: there are a lot from here
+    // 1. find a way na ma add ang equals sa ops while retaining it's unique feat
+    // 2. i sagol ang stack sa initial result and sa equals if pwede
+    // 3. (if input is empty) dapat ig enter sa number kay ma kita sa result ang inputted nums
+    // 4. do something when (worst case) the ops button is clicked first
+    // 5. lastly, modify the landscape orientation of calc using landscape qualifier
+    // 6. GOODNIGHT!
+    //kapoy mn,, balikon nlng tika kng naa nakoy gana ehe
     Button btnDivide, btnMultiply, btnPlus, btnMinus, btnEquals;
-
-    //clear, all clear, and backspace
-    Button btnC, btnAC, btnBS, btnPeriod;
-    private static final int[] nums_ID = {
+    Button[] btn_nums = new Button[11];
+    Button[] btn_ops = new Button[4];
+    Button btnC, btnHome, btnBS, btnPeriod;
+    private static final Integer[] nums_ID = {
             R.id.one,
             R.id.two,
             R.id.three,
@@ -33,16 +40,17 @@ public class Calculator extends AppCompatActivity{
             R.id.doubleZero,
     };
 
-    private static final int[] ops_ID = {
+    private static final Integer[] ops_ID = {
             R.id.divide,
             R.id.multiply,
             R.id.minus,
             R.id.plus,
             R.id.equals
     };
+    List<Integer> numId = Arrays.asList(nums_ID);
+    List<Integer> opId = Arrays.asList(ops_ID);
     TextView output;
     TextView result;
-
     Stack<Double> numbers = new Stack<>();
     Stack<Character> operators = new Stack<>();
 
@@ -53,164 +61,32 @@ public class Calculator extends AppCompatActivity{
 
         //assign all buttons by their respective findviewbyid
         //numbers first
-        btnOne = (Button) findViewById(nums_ID[0]);
-        btnTwo = (Button) findViewById(nums_ID[1]);
-        btnThree = (Button) findViewById(nums_ID[2]);
-        btnFour = (Button) findViewById(nums_ID[3]);
-        btnFive = (Button) findViewById(nums_ID[4]);
-        btnSix = (Button) findViewById(nums_ID[5]);
-        btnSeven = (Button) findViewById(nums_ID[6]);
-        btnEight = (Button) findViewById(nums_ID[7]);
-        btnNine = (Button) findViewById(nums_ID[8]);
-        btnZero = (Button) findViewById(nums_ID[9]);
-        btnZero2 = (Button) findViewById(nums_ID[10]);
 
-        //operations
-        btnDivide = (Button) findViewById(ops_ID[0]);
-        btnMultiply = (Button) findViewById(ops_ID[1]);
-        btnMinus = (Button) findViewById(ops_ID[2]);
-        btnPlus = (Button) findViewById(ops_ID[3]);
+        //for btns na array nums
+        for (int i = 0; i<btn_nums.length; i++){
+            btn_nums[i] = (Button) findViewById(nums_ID[i]);
+            btn_nums[i].setOnClickListener(this);
+        }
+
+        //for btns na array ops
+        for (int i = 0; i<btn_ops.length; i++){
+            btn_ops[i] = (Button) findViewById(ops_ID[i]);
+            btn_ops[i].setOnClickListener(this);
+        }
+        //planning to add at ops but equals is unique
         btnEquals = (Button) findViewById(ops_ID[4]);
 
         //excess buttons
-        btnAC = (Button) findViewById(R.id.allClear);
+        btnHome = (Button) findViewById(R.id.uli);
         btnC = (Button) findViewById(R.id.clear);
         btnBS = (Button) findViewById(R.id.backspace);
         btnPeriod = (Button) findViewById(R.id.period);
-
 
         //for textviews
         output = (TextView) findViewById(R.id.view);
         result = (TextView) findViewById(R.id.result);
         result.setText(null);
 
-        btnOne.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                output.setText(output.getText() + "" +  btnOne.getText());
-                initialResult(String.valueOf(output.getText()));
-            }
-        });
-        btnTwo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                output.setText(output.getText()  + "" +  btnTwo.getText());
-                initialResult(String.valueOf(output.getText()));
-            }
-        });
-        btnThree.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                output.setText(output.getText()  + "" +  btnThree.getText());
-                initialResult(String.valueOf(output.getText()));
-            }
-        });
-        btnFour.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                output.setText(output.getText() + "" +  btnFour.getText());
-                initialResult(String.valueOf(output.getText()));
-            }
-        });
-        btnFive.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                output.setText(output.getText()  + "" +  btnFive.getText());
-                initialResult(String.valueOf(output.getText()));
-            }
-        });
-        btnSix.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                output.setText(output.getText()  + "" +  btnSix.getText());
-                initialResult(String.valueOf(output.getText()));
-            }
-        });
-        btnSeven.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                output.setText(output.getText()  + "" +  btnSeven.getText());
-                initialResult(String.valueOf(output.getText()));
-            }
-        });
-        btnEight.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                output.setText(output.getText() + "" +  btnEight.getText());
-                initialResult(String.valueOf(output.getText()));
-            }
-        });
-        btnNine.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                output.setText(output.getText()  + "" +  btnNine.getText());
-                initialResult(String.valueOf(output.getText()));
-            }
-        });
-        btnZero.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                output.setText(output.getText()  + "" +  btnZero.getText());
-                initialResult(String.valueOf(output.getText()));
-            }
-        });
-        btnZero2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                output.setText(output.getText()  + "" +  btnZero2.getText());
-                initialResult(String.valueOf(output.getText()));
-            }
-        });
-
-        //ops buttons
-        btnDivide.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String temp = String.valueOf(output.getText());
-                if (isOp(output.getText().charAt(output.getText().length()-1))) {
-                    temp = temp.substring(0, temp.length()-1) + btnDivide.getText();
-                }else{
-                    temp += btnDivide.getText();
-                }
-                output.setText(temp);
-            }
-        });
-        btnMultiply.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String temp = String.valueOf(output.getText());
-                if (isOp(output.getText().charAt(output.getText().length()-1))) {
-                    temp = temp.substring(0, temp.length()-1) + btnMultiply.getText();
-                }else{
-                    temp += btnMultiply.getText();
-                }
-                output.setText(temp);
-            }
-        });
-        btnMinus.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String temp = String.valueOf(output.getText());
-                if (isOp(output.getText().charAt(output.getText().length()-1))) {
-                    temp = temp.substring(0, temp.length()-1) + btnMinus.getText();
-                }else{
-                    temp += btnMinus.getText();
-                }
-                output.setText(temp);
-            }
-        });
-        btnPlus.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String temp = String.valueOf(output.getText());
-                if (isOp(output.getText().charAt(output.getText().length()-1))) {
-                    temp = temp.substring(0, temp.length()-1) + btnPlus.getText();
-                }else{
-                    temp += btnPlus.getText();
-                }
-                output.setText(temp);
-            }
-        });
         btnEquals.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -255,11 +131,10 @@ public class Calculator extends AppCompatActivity{
         });
 
         //others all clear, clear, backspace
-        btnAC.setOnClickListener(new View.OnClickListener() {
+        btnHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                output.setText(null);
-                result.setText(null);
+                finish();
             }
         });
         btnC.setOnClickListener(new View.OnClickListener() {
@@ -433,5 +308,24 @@ public class Calculator extends AppCompatActivity{
             }
         }
         result.setText(Double.toString(res));
+    }
+
+    @Override
+    public void onClick(View view) {
+        if ( numId.contains( view.getId() ) ){
+            output.setText(output.getText() + "" +  btn_nums[ numId.indexOf( view.getId() ) ].getText());
+            initialResult(String.valueOf(output.getText()));
+        }
+        if ( opId.contains( view.getId() ) ){
+            String temp = String.valueOf(output.getText());
+            if (!temp.isEmpty()){
+                if (isOp(output.getText().charAt(output.getText().length() - 1))) {
+                    temp = temp.substring(0, temp.length() - 1) + btn_ops[opId.indexOf(view.getId())].getText();
+                } else {
+                    temp += btn_ops[opId.indexOf(view.getId())].getText();
+                }
+                output.setText(temp);
+            }
+        }
     }
 }

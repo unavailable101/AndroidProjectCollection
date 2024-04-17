@@ -14,7 +14,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
 //    Button layout, btn_exer, calc, midterm, connect;
-    Button[] btns = new Button[5];
+    Button[] btns = new Button[6];
     Toast toast;
 
     Integer[] id = new Integer[] {
@@ -22,7 +22,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             R.id.btn_exer,
             R.id.calc,
             R.id.midterm,
-            R.id.connect
+            R.id.connect,
+            R.id.passingIntents
     };
 
     List<Integer> id_list = Arrays.asList(id);
@@ -32,7 +33,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        for (int i = 0; i<5; i++){
+        for (int i = 0; i<id.length; i++){
             btns[i] = (Button) findViewById(id_list.get(i));
             btns[i].setOnClickListener(this);
         }
@@ -82,6 +83,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 intent = new Intent(MainActivity.this, Connect3.class);
                 startActivity(intent);
                 break;
+            case 5: //Passing Intents
+                intent = new Intent(MainActivity.this, PassingIntents.class);
+                startActivity(intent);
+                break;
+//            case 6: //upcoming activity
+//                intent = new Intent(MainActivity.this, PassingIntents.class);
+//                startActivity(intent);
+//                break;
+//            case 7: //upcoming act
+//                intent = new Intent(MainActivity.this, PassingIntents.class);
+//                startActivity(intent);
+//                break;
             default:
                 System.out.println("I was called!");
         }

@@ -1,23 +1,28 @@
 <resources>
     <string name="app_name">AndroidProjectCollection</string>
-    
-<!--    for btn exer-->
+
+    <string name="title">Project Collection</string>
+
+    <!--    for btn exer-->
     <string name="close">Close</string>
     <string name="toast">Toast</string>
     <string name="change_bg">Change Background</string>
     <string name="change_btn_bg">Change Button Background</string>
     <string name="invisible">Disappear</string>
     <string name="balik">Return</string>
-    
-<!--    for main-->
+
+    <!--    for main-->
     <string name="layout">Layout Exercise</string>
     <string name="btn_exer">Button Exercise</string>
     <string name="calc">Calculator</string>
     <string name="midterm">Midterm</string>
     <string name="konek">Connect 3</string>
+    <string name="actThisDay">Passing Intents</string>
+    <string name="fragments">Fragments</string>
+    <string name="menus">Menus</string>
 
-<!--for calc-->
-    <string name="all_clear">AC</string>
+    <!--for calc-->
+    <string name="home">H</string>
     <string name="clear">C</string>
     <string name="period">.</string>
     <string name="division">/</string>
@@ -38,15 +43,39 @@
     <string name="backspace"> BS </string>
     <string name="equals">=</string>
 
-<!--    for color matching (midterm)-->
-<!--    <string name="color_matching">Start Color Matching Game</string>-->
+    <!--    for color matching (midterm)-->
+    <!--    <string name="color_matching">Start Color Matching Game</string>-->
     <string name="ret">Return</string>
     <string name="exit">Exit</string>
-    <string name="game">Color Matching</string>
+    <string name="game">Color\nMatching</string>
     <string name="empty"> </string>
 
-<!--    for connect 3-->
-    <string name="konek">Connect 3</string>
+    <!--    for connect 3-->
     <string name="restart">Restart</string>
+    <string name="black">Black</string>
+    <string name="red">Red</string>
 
+    <!--    for passing intents-->
+    <string name="form_name">Student Registration Form</string>
+    <string name="complete_name">Complete Name: </string>
+    <string name="fname_placeholder">First Name</string>
+    <string name="lname_placeholder">Last Name</string>
+    <string name="gender_label">Gender: </string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="others">Others</string>
+    <string name="birthdate">Birth Date: </string>
+    <string name="phone">Phone Number: </string>
+    <string name="email">Email Address: </string>
+
+    <string name="address">Address: </string>
+    <string name="yearlevel">Year Level: </string>
+    <string name="program">Program: </string>
+    <string name="department">Department: </string>
+    <string name="idnumber">ID Number: </string>
+
+    <string name="clear_form">Clear</string>
+    <string name="submit_form">Submit</string>
+
+    <string name="stud_profile">Student Profile</string>
 </resources>
