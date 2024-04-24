@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/to_change"
+        android:title="@string/to_change">
+        <menu>
+            <item
+                android:id="@+id/changeBgColor"
+                android:title="@string/change_bgColor" />
+            <item
+                android:id="@+id/changeText"
+                android:title="@string/change_txt" />
+            <item
+                android:id="@+id/changeTextSize"
+                android:title="@string/change_txtSize" />
+            <item
+                android:id="@+id/changeTextColor"
+                android:title="@string/change_txtColor" />
+            <item
+                android:id="@+id/changeSize"
+                android:title="@string/change_size" />
+            <item
+                android:id="@+id/changeRotation"
+                android:title="@string/change_rotation" />
+        </menu>
+    </item>
+    <item
+        android:id="@+id/to_reset"
+        android:title="@string/to_reset" />
+    <item
+        android:id="@+id/to_exit"
+        android:title="@string/to_exit" />
+</menu>

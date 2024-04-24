@@ -17,6 +17,9 @@
     <string name="calc">Calculator</string>
     <string name="midterm">Midterm</string>
     <string name="konek">Connect 3</string>
+    <string name="actThisDay">Passing Intents</string>
+    <string name="fragments">Fragments</string>
+    <string name="menus">Menus</string>
 
 <!--for calc-->
     <string name="home">H</string>
@@ -51,5 +54,55 @@
     <string name="restart">Restart</string>
     <string name="black">Black</string>
     <string name="red">Red</string>
+
+    <!--    for passing intents-->
+    <string name="form_name">Student Registration Form</string>
+    <string name="complete_name">Complete Name: </string>
+    <string name="fname_placeholder">First Name</string>
+    <string name="lname_placeholder">Last Name</string>
+    <string name="gender_label">Gender: </string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="others">Others</string>
+    <string name="birthdate">Birth Date: </string>
+    <string name="phone">Phone Number: </string>
+    <string name="email">Email Address: </string>
+
+    <string name="address">Address: </string>
+    <string name="yearlevel">Year Level: </string>
+    <string name="program">Program: </string>
+    <string name="department">Department: </string>
+    <string name="idnumber">ID Number: </string>
+
+    <string name="clear_form">Clear</string>
+    <string name="submit_form">Submit</string>
+
+    <string name="stud_profile">Student Profile</string>
+
+
+<!--    for menus-->
+    <string name="to_change">Change</string>
+    <string name="to_reset">Reset</string>
+    <string name="to_exit">Exit</string>
+    <string name="change_bgColor">Background Color</string>
+    <string name="change_txt">Text</string>
+    <string name="change_txtColor">Text Color</string>
+    <string name="change_txtSize">Text Size</string>
+    <string name="change_size">Size</string>
+    <string name="change_radius">Radius</string>
+    <string name="change_rotation">Rotation</string>
+
+<!--    random strings-->
+    <string name="str">Hello World</string>
+    <string name="str1">Hi</string>
+    <string name="str2">Hello</string>
+    <string name="str3">Goodbye</string>
+    <string name="str4">Good Morning</string>
+    <string name="str5">Good Evening</string>
+    <string name="str6">Good Afternoon</string>
+    <string name="str7">Gwapa ko</string>
+    <string name="str8">Cute kayko</string>
+    <string name="str9">Congrats</string>
+    <string name="str10">OHMAYGHAD</string>
 
 </resources>

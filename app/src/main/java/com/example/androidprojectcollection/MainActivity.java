@@ -14,8 +14,6 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
 //    Button layout, btn_exer, calc, midterm, connect;
-    Button[] btns = new Button[6];
-    Toast toast;
 
     Integer[] id = new Integer[] {
             R.id.layout_exer,
@@ -23,10 +21,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             R.id.calc,
             R.id.midterm,
             R.id.connect,
-            R.id.passingIntents
+            R.id.passingIntents,
+            R.id.fragments,
+            R.id.menus
     };
 
     List<Integer> id_list = Arrays.asList(id);
+    Button[] btns = new Button[id.length];
+    Toast toast;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,13 +90,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(intent);
                 break;
 //            case 6: //upcoming activity
-//                intent = new Intent(MainActivity.this, PassingIntents.class);
+//                intent = new Intent(MainActivity.this, Fragments.class);
 //                startActivity(intent);
 //                break;
-//            case 7: //upcoming act
-//                intent = new Intent(MainActivity.this, PassingIntents.class);
-//                startActivity(intent);
-//                break;
+            case 7: //upcoming act
+                intent = new Intent(MainActivity.this, Menus.class);
+                startActivity(intent);
+                break;
             default:
                 System.out.println("I was called!");
         }
