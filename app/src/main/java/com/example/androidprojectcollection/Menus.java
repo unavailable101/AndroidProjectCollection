@@ -61,7 +61,9 @@ public class Menus extends AppCompatActivity {
         Random r = new Random();
         if (item.getItemId() == R.id.to_change){
             Toast.makeText( this, "Edit Object Item is clicked", Toast.LENGTH_SHORT) .show();
-        } else if (item.getItemId() == R.id.to_reset) {
+        } else if (item.getItemId() == R.id.to_exit) {
+            finish();
+        }else if (item.getItemId() == R.id.to_reset) {
             Toast.makeText( this, "Reset Object Item is clicked", Toast.LENGTH_SHORT).show();
             btn.setBackgroundColor(getColor(R.color.light_lavender));
             btn.setText(getText(R.string.str));
